@@ -18,4 +18,5 @@ const PortfolioReducer = (state = initialState, action) => {
   }
   return newState;
 };
+
 export default PortfolioReducer;

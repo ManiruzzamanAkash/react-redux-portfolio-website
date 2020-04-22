@@ -10293,6 +10293,10 @@ header.masthead .masthead-heading {
     color: white;
 }
 
+.portfolio-item img.img-fluid {
+    height: 200px;
+}
+
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
     opacity: 1;
 }
