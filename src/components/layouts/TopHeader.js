@@ -11,10 +11,10 @@ const TopHeader = () => {
       <header className="masthead">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <img src={profileImage} alt="" />
+            <div className="col-md-4 col-sm-6">
+              <img src={profileImage} alt="" className="img" />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-8 col-sm-6">
               <div className="masthead-subheading">
                 Hi, I'm Maniruzzaman Akash
               </div>
