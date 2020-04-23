@@ -2,10 +2,12 @@ import {
   API_PORTFOLIO_LIST,
   API_PORTFOLIO_LIST_BY_CATEGORY
 } from "../../../APIEndPoint";
-import { GET_PROTFOLIOS } from "../ActionTypes";
+import { GET_PROTFOLIOS, SET_PROTFOLIOS_LOADING } from "../ActionTypes";
 import Axios from "axios";
 
 export const getPortfolioAction = categoryID => dispatch => {
+  dispatch({ type: SET_PROTFOLIOS_LOADING, payload: true });
+
   let apiEndPoint = API_PORTFOLIO_LIST;
   if (typeof categoryID !== "undefined" && categoryID !== 0) {
     apiEndPoint = `${API_PORTFOLIO_LIST_BY_CATEGORY}/${categoryID}`;
@@ -13,10 +15,12 @@ export const getPortfolioAction = categoryID => dispatch => {
 
   Axios.get(apiEndPoint)
     .then(res => {
+      dispatch({ type: SET_PROTFOLIOS_LOADING, payload: false });
       return dispatch(dispatchGetPortfolios(res.data.data));
     })
     .catch(err => {
-      return dispatchGetPortfolios([]);
+      dispatch({ type: SET_PROTFOLIOS_LOADING, payload: false });
+      return dispatch(dispatchGetPortfolios([]));
     });
 };
 

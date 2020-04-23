@@ -1,7 +1,11 @@
-import { GET_PROTFOLIOS } from "../../actions/ActionTypes";
+import {
+  GET_PROTFOLIOS,
+  SET_PROTFOLIOS_LOADING
+} from "../../actions/ActionTypes";
 
 const initialState = {
-  portfolioList: []
+  portfolioList: [],
+  isLoading: false
 };
 
 const PortfolioReducer = (state = initialState, action) => {
@@ -11,8 +15,16 @@ const PortfolioReducer = (state = initialState, action) => {
     case GET_PROTFOLIOS:
       return {
         ...state,
-        portfolioList: action.payload
+        portfolioList: action.payload,
+        isLoading: false
       };
+
+    case SET_PROTFOLIOS_LOADING:
+      return {
+        ...state,
+        isLoading: action.payload
+      };
+
     default:
       break;
   }

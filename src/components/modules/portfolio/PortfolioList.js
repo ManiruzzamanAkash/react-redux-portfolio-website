@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import Loader from "react-loader-spinner";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Modal from "react-bootstrap/Modal";
@@ -21,8 +22,9 @@ const PortfolioList = props => {
     dispatch(getCategoryAction());
   }, [props]);
 
-  let portfolios = useSelector(state => state.PortfolioReducer.portfolioList);
-  let categories = useSelector(state => state.CategoryReducer.categoryList);
+  const portfolios = useSelector(state => state.PortfolioReducer.portfolioList);
+  const categories = useSelector(state => state.CategoryReducer.categoryList);
+  const isLoading = useSelector(state => state.PortfolioReducer.isLoading);
 
   const showDetails = item => {
     setItem(item);
@@ -73,7 +75,18 @@ const PortfolioList = props => {
         ))}
       </div>
 
-      {portfolios.length === 0 && (
+      <div className="text-center mt-2">
+        <Loader
+          type="TailSpin"
+          color="#00BFFF"
+          height={100}
+          width={100}
+          timeout={10000}
+          visible={isLoading}
+        />
+      </div>
+
+      {portfolios.length === 0 && !isLoading && (
         <div className="alert alert-info p-3 mt-4 text-center">
           <strong>No Portfolio found in this section !!</strong>
         </div>
@@ -88,7 +101,7 @@ const PortfolioList = props => {
         size="lg"
         centered
       >
-        <PortfolioSingle item={item} />
+        <PortfolioSingle item={item} onClose={() => setModalShow(false)} />
       </Modal>
     </>
   );

@@ -6,6 +6,7 @@ import App from "./App";
 
 /**** Start Import CSS ***********/
 import "react-toastify/dist/ReactToastify.min.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./assets/styles/template_style.css";
 import "./assets/styles/style.css";
 import "./assets/styles/responsive.css";
