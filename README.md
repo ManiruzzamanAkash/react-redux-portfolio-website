@@ -1,6 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is My Portfolio Project:
 
-## Available Scripts
+My Portfolio is a website designed with react-bootstrap, frontend developed with React, Redux, Redux-thunk, React Hook API and many more latest technologies.
+
+### Home Page
+
+<img src="https://i.ibb.co/2S5C9Cm/my-portfolio.png" alt="my-portfolio">
+
+### Portfolio List Page
+
+<img src="https://i.ibb.co/rc1vb5b/portfolio-list-page.png" alt="portfolio-list-page">
+
+### Portfolio Details Page
+
+<img src="https://i.ibb.co/6BgnwyZ/portfolio-details-page.png" alt="portfolio-details-page">
+
+### About Me Page
+
+<img src="https://i.ibb.co/m5kw1tJ/About-Me-Page.png" alt="About-Me-Page">
+
+### Contact Me Page
+
+<img src="https://i.ibb.co/tYg9yhS/Contact-me-page.png" alt="Contact-me-page">
+
+## How to Start with this project
+
+Install the node packages
+
+### `npm install`
 
 In the project directory, you can run:
 
