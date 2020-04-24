@@ -1,27 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import SlideshowIcon from "@material-ui/icons/Slideshow";
-import profileImage from "../../assets/img/about/profile-large.png";
+import HTMLParser from "../../../components/partials/html-parser/HTMLParser";
 
-const TopHeader = () => {
+import SocialLink from "../../modules/about/social-links/SocialLink";
+
+const HomePageHeader = props => {
+  const about = useSelector(state => state.AboutReducer.about);
+
   return (
     <>
       <header className="masthead">
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-6">
-              <img src={profileImage} alt="" className="img" />
+              <img src={about.profile_image} alt="" className="img" />
             </div>
             <div className="col-md-8 col-sm-6">
               <div className="masthead-subheading">
-                Hi, I'm Maniruzzaman Akash
+                {about.short_description}
+                <div className="about-description">
+                  <HTMLParser data={about.description} />
+                </div>
               </div>
-              <div className="masthead-heading text-uppercase">
-                Welcome to my portfolio
-              </div>
-              <div>
+              {about.is_welcome_enable && (
+                <div className="masthead-heading text-uppercase">
+                  <HTMLParser data={about.welcome_message} />
+                </div>
+              )}
+
+              <SocialLink data={about} />
+
+              <div className="mt-2">
                 <Link
                   className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
                   to="/about"
@@ -45,4 +58,4 @@ const TopHeader = () => {
   );
 };
 
-export default TopHeader;
+export default HomePageHeader;

@@ -1,14 +1,13 @@
 import React, { Suspense } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import routes from "../src/router/Router";
-import { connect } from "react-redux";
-import Navbar from "./components/layouts/Navbar";
+import Navigationbar from "./components/layouts/Navigationbar";
 import Loading from "./components/pages/Loading";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navigationbar />
       <Suspense fallback={<Loading />}>
         <Switch>
           {routes.map((route, index) => (
@@ -26,8 +25,4 @@ function App() {
   );
 }
 
-const mapStateToProps = state => {
-  return {};
-};
-
-export default withRouter(connect(mapStateToProps, null)(App));
+export default withRouter(App);

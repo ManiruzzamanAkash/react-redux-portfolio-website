@@ -1,14 +1,10 @@
 import React from "react";
-import TopHeader from "../../components/layouts/TopHeader";
+import HomePageHeader from "../../components/pages/home/HomePageHeader";
 
 const HomePageContainer = () => {
   return (
     <>
-      <TopHeader />
-      {/* <div>
-        <h2>Welcome</h2>
-        <p>HomePageContainer</p>
-      </div> */}
+      <HomePageHeader />
     </>
   );
 };

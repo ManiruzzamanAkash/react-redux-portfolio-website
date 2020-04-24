@@ -20,7 +20,7 @@ const PortfolioList = props => {
   useEffect(() => {
     dispatch(getPortfolioAction());
     dispatch(getCategoryAction());
-  }, [props]);
+  }, [dispatch]);
 
   const portfolios = useSelector(state => state.PortfolioReducer.portfolioList);
   const categories = useSelector(state => state.CategoryReducer.categoryList);
@@ -56,14 +56,14 @@ const PortfolioList = props => {
             key={item.id}
           >
             <div className="portfolio-item">
-              <a className="portfolio-link">
+              <div className="portfolio-link">
                 <div className="portfolio-hover">
                   <div className="portfolio-hover-content">
                     <VisibilityIcon />
                   </div>
                 </div>
                 <img className="img-fluid" src={item.image} alt={item.title} />
-              </a>
+              </div>
               <div className="portfolio-caption">
                 <div className="portfolio-caption-heading">{item.title}</div>
                 <div className="portfolio-caption-subheading text-muted">

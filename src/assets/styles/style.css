@@ -39,6 +39,18 @@ body {
                             Body
 ***********************************************************************************/
 
+
+/** Homepage Start **/
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/** Homepage End **/
+
 .carousel-item img.d-block {
     height: 400px;
     width: auto;
@@ -98,6 +110,101 @@ body {
 .portfolio-logo {
     width: 100px;
 }
+
+
+/** Life History **/
+
+.timeline>li .timeline-image:hover {
+    background: #e8396a;
+    transition: .5s;
+    color: #FFF;
+    font-weight: bold;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+
+.timeline-image h4 a {
+    color: #FFF;
+}
+
+.timeline-image h4 a:hover {
+    text-decoration: none;
+}
+
+
+/** Life History **/
+
+
+/** Social Icons **/
+
+.social-icon {
+    padding: 5px;
+    color: #FFF;
+    margin-right: 2px;
+}
+
+.social-icon:hover {
+    color: inherit;
+}
+
+.btn-email {
+    background: #C64135;
+}
+
+.btn-phone {
+    background: #1a91da;
+}
+
+.btn-facebook {
+    background: #0D8CF1;
+}
+
+.btn-twitter {
+    background: #1A91DA;
+}
+
+.btn-linkedin {
+    background: #0077B5;
+}
+
+.btn-youtube {
+    background: #FF0000;
+}
+
+.btn-github {
+    background: #FFF;
+    color: #14161e;
+}
+
+.btn-github:hover {
+    color: #14161e;
+}
+
+.btn-instagram {
+    background: #D82678;
+}
+
+
+/** Social Icons **/
+
+
+/** Contact Page **/
+
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+    padding: .6rem !important;
+}
+
+.form-group p {
+    line-height: 1rem;
+}
+
+.cursor-text {
+    cursor: text !important;
+}
+
+
+/** Contact Page **/
 
 
 /**********************************************************************************

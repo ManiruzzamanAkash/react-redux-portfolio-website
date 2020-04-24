@@ -44,7 +44,7 @@ const PortfolioSingle = props => {
           <div className="row justify-content-center">
             <div className="col-lg-3 text-center">
               <div className="">
-                {logo != null && (
+                {logo !== null && (
                   <img src={logo} className="portfolio-logo mt-3" alt={title} />
                 )}
               </div>
@@ -66,6 +66,7 @@ const PortfolioSingle = props => {
                 <a
                   className="btn btn-info btn-rounded"
                   href={live_link}
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <VisibilityIcon /> Live Preview
@@ -77,6 +78,7 @@ const PortfolioSingle = props => {
                   <a
                     className="btn btn-light btn-rounded"
                     href={github_link}
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     <GitHubIcon /> Github
@@ -84,13 +86,13 @@ const PortfolioSingle = props => {
                 </div>
               )}
               <div className="fixed-bottom mb-3">
-                <a
+                <button
                   className="btn btn-warning btn-rounded btn-close-modal"
                   onClick={() => props.onClose()}
                 >
                   <CloseIcon />
                   Close
-                </a>
+                </button>
               </div>
             </div>
             <div className="col-lg-9">

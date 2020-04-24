@@ -15,7 +15,7 @@ const ImageGallary = props => {
       {images.length > 0 && (
         <Carousel activeIndex={index} onSelect={handleSelect}>
           {images.map((image, index) => (
-            <Carousel.Item>
+            <Carousel.Item key={index}>
               <img
                 className="d-block w-100"
                 src={image.image}
@@ -30,7 +30,11 @@ const ImageGallary = props => {
         </Carousel>
       )}
       {images.length === 0 && (
-        <img className="img-fluid" src={fallbackImage} alt={fallbackTitle} />
+        <img
+          className="img-fluid mb-2 mt-2"
+          src={fallbackImage}
+          alt={fallbackTitle}
+        />
       )}
     </>
   );
