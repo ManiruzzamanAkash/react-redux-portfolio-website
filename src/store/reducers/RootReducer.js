@@ -5,6 +5,8 @@ import PortfolioReducer from "../reducers/portfolios/PortfolioReducer";
 import AboutReducer from "../reducers/about/AboutReducer";
 import CategoryReducer from "../reducers/portfolios/CategoryReducer";
 import ContactReducer from "../reducers/contact/ContactReducer";
+import ActivityTypeReducer from "../reducers/extra-activity/ActivityTypeReducer";
+import ActivityReducer from "../reducers/extra-activity/ActivityReducer";
 
 const RootReducer = combineReducers(
   Object.assign(
@@ -12,7 +14,9 @@ const RootReducer = combineReducers(
       PortfolioReducer,
       CategoryReducer,
       AboutReducer,
-      ContactReducer
+      ContactReducer,
+      ActivityTypeReducer,
+      ActivityReducer,
     },
     { Intl }
   )

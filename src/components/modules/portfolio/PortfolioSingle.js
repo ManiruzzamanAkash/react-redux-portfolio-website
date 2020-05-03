@@ -12,7 +12,7 @@ import DateRange from "../../partials/date-generator/date-range/DateRange";
 import TagList from "../../partials/tags/TagList";
 import HTMLParser from "../../partials/html-parser/HTMLParser";
 
-const PortfolioSingle = props => {
+const PortfolioSingle = (props) => {
   const {
     title,
     image,
@@ -26,7 +26,7 @@ const PortfolioSingle = props => {
     long_description,
     client,
     category,
-    programming_technologies
+    programming_technologies,
   } = props.item;
   return (
     <>
@@ -64,7 +64,7 @@ const PortfolioSingle = props => {
               </ul>
               {live_link != null && (
                 <a
-                  className="btn btn-info btn-rounded"
+                  className="btn btn-danger btn-rounded"
                   href={live_link}
                   rel="noopener noreferrer"
                   target="_blank"

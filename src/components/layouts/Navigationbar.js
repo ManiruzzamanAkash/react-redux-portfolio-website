@@ -7,16 +7,16 @@ import Nav from "react-bootstrap/Nav";
 
 import { getAboutAction } from "../../store/actions/lifeStories/AboutAction";
 
-const Navigationbar = props => {
+const Navigationbar = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAboutAction());
   }, [dispatch]);
 
-  const about = useSelector(state => state.AboutReducer.about);
+  const about = useSelector((state) => state.AboutReducer.about);
   const currentPath = props.history.location.pathname;
 
-  const navLinkCSS = path => {
+  const navLinkCSS = (path) => {
     let navCSS = "nav-item nav-link";
     if (currentPath === path) {
       navCSS += " active";
@@ -56,6 +56,14 @@ const Navigationbar = props => {
               <li className="nav-item">
                 <Link to="/about" className={navLinkCSS("/about")}>
                   About Me
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/extra-curricular"
+                  className={navLinkCSS("/extra-curricular")}
+                >
+                  Extra Curricular
                 </Link>
               </li>
               <li className="nav-item">

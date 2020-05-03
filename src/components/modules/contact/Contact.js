@@ -9,13 +9,13 @@ const Contact = () => {
   const { register, handleSubmit, errors, reset } = useForm();
   const dispatch = useDispatch();
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     dispatch(storeContactAction(data));
   };
 
-  const isLoading = useSelector(state => state.ContactReducer.isLoading);
-  const status = useSelector(state => state.ContactReducer.status);
-  const message = useSelector(state => state.ContactReducer.message);
+  const isLoading = useSelector((state) => state.ContactReducer.isLoading);
+  const status = useSelector((state) => state.ContactReducer.status);
+  const message = useSelector((state) => state.ContactReducer.message);
   const formData = { name: "", email: "", phone: "", subject: "", message: "" };
 
   useEffect(() => {
@@ -115,7 +115,7 @@ const Contact = () => {
         <div className="text-center">
           {!isLoading && (
             <button
-              className="btn btn-primary btn-xl text-uppercase"
+              className="btn btn-outline-primary btn-xl text-uppercase"
               type="submit"
             >
               Send Message
@@ -124,7 +124,7 @@ const Contact = () => {
 
           {isLoading && (
             <button
-              className="btn btn-primary btn-xl text-uppercase cursor-text"
+              className="btn btn-outline-primary btn-xl text-uppercase cursor-text"
               type="button"
             >
               Sending{" "}

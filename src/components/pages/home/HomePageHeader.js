@@ -8,8 +8,8 @@ import HTMLParser from "../../../components/partials/html-parser/HTMLParser";
 
 import SocialLink from "../../modules/about/social-links/SocialLink";
 
-const HomePageHeader = props => {
-  const about = useSelector(state => state.AboutReducer.about);
+const HomePageHeader = (props) => {
+  const about = useSelector((state) => state.AboutReducer.about);
 
   return (
     <>
@@ -36,7 +36,7 @@ const HomePageHeader = props => {
 
               <div className="mt-2">
                 <Link
-                  className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                  className="btn btn-outline-primary btn-xl text-uppercase js-scroll-trigger"
                   to="/about"
                 >
                   About Me <ArrowForwardIcon />
@@ -44,7 +44,7 @@ const HomePageHeader = props => {
               </div>
               <div className="mt-2">
                 <Link
-                  className="btn btn-info btn-xl text-uppercase js-scroll-trigger"
+                  className="btn btn-outline-info btn-xl text-uppercase js-scroll-trigger"
                   to="/portfolio"
                 >
                   View Portfolios <SlideshowIcon />

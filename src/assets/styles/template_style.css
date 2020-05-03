@@ -10148,7 +10148,6 @@ img::-moz-selection {
     font-size: 0.75rem;
     color: #fff;
     text-transform: uppercase;
-    background-color: #fed136;
     border: 1px solid #fed136;
     border-radius: 0px !important;
 }

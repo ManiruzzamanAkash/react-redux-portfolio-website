@@ -9,6 +9,13 @@ export const GET_CATEGORIES = "GET_CATEGORIES";
 export const GET_PROTFOLIOS = "GET_PROTFOLIOS";
 export const SET_PROTFOLIOS_LOADING = "SET_PROTFOLIOS_LOADING";
 
+/** Activity Type Actions */
+export const GET_ACTIVITY_TYPES = "GET_ACTIVITY_TYPES";
+
+/** Activity Actions */
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
+export const SET_ACTIVITIES_LOADING = "SET_ACTIVITIES_LOADING";
+
 /** Lifestory / about Actions */
 export const GET_LIFE_STORIES = "GET_LIFE_STORIES";
 export const GET_ABOUT = "GET_ABOUT";

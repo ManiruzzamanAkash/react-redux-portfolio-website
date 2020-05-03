@@ -12,32 +12,41 @@ const ContactPageContainer = React.lazy(() =>
 const PortfolioPageContainer = React.lazy(() =>
   import("../views/pages/PortfolioPageContainer")
 );
+const ExtraActivityPageContainer = React.lazy(() =>
+  import("../views/pages/ExtraActivityPageContainer")
+);
 
 const routes = [
   {
     path: "/",
     name: "Home page",
     component: HomePageContainer,
-    exact: true
+    exact: true,
   },
   {
     path: "/about",
     name: "About page",
     component: AboutPageContainer,
-    exact: true
+    exact: true,
   },
   {
     path: "/contact",
     name: "Contact page",
     component: ContactPageContainer,
-    exact: true
+    exact: true,
   },
   {
     path: "/portfolio",
     name: "Portfolio page",
     component: PortfolioPageContainer,
-    exact: true
-  }
+    exact: true,
+  },
+  {
+    path: "/extra-curricular",
+    name: "Extra Curricular Activity Page",
+    component: ExtraActivityPageContainer,
+    exact: true,
+  },
 ];
 
 export default routes;

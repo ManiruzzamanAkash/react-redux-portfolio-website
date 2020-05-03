@@ -12,6 +12,8 @@ import DateRange from "../../partials/date-generator/date-range/DateRange";
 import LifeStoryDetail from "./LifeStoryDetail";
 import SocialLink from "./social-links/SocialLink";
 
+import "./styles.css";
+
 const LifeHistory = () => {
   const [modalShow, setModalShow] = useState(false);
   const [item, setItem] = useState({});
@@ -22,11 +24,11 @@ const LifeHistory = () => {
     dispatch(getAboutHistoryAction());
   }, [dispatch]);
 
-  const about = useSelector(state => state.AboutReducer.about);
-  const lifeStories = useSelector(state => state.AboutReducer.lifeStoryList);
-  const isLoading = useSelector(state => state.AboutReducer.isLoading);
+  const about = useSelector((state) => state.AboutReducer.about);
+  const lifeStories = useSelector((state) => state.AboutReducer.lifeStoryList);
+  const isLoading = useSelector((state) => state.AboutReducer.isLoading);
 
-  const viewDetails = item => {
+  const viewDetails = (item) => {
     setItem(item);
     if (!modalShow) setModalShow(true);
   };
@@ -49,9 +51,13 @@ const LifeHistory = () => {
           <HTMLParser data={about.description} />
         </h3>
         <SocialLink data={about} />
-        <div className="float-right" onClick={() => sortStory()}>
+        <div className="float-right mt-2 mb-2" onClick={() => sortStory()}>
           <button
-            className={order === "asc" ? "btn btn-primary" : "btn btn-info"}
+            className={
+              order === "asc"
+                ? "btn btn-outline-primary"
+                : "btn btn-outline-info"
+            }
             title="Sort life story. Click to toggle events !!"
           >
             <SortIcon />

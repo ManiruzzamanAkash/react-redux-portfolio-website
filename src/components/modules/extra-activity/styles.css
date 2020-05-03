@@ -1,0 +1,14 @@
+.activity-item {
+    background: #242838;
+    padding: 10px;
+    color: #6c757d;
+    text-transform: capitalize !important;
+    margin-top: 10px;
+}
+
+.activity-item h6 {
+    background: #6c757d1c !important;
+    padding: 10px;
+    text-align: center;
+    color: #fed136;
+}

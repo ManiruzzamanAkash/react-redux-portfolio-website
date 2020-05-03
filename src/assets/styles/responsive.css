@@ -1,0 +1,33 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    header.masthead {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    header.masthead img {
+        width: 80%;
+    }
+    header.masthead .masthead-heading {
+        font-size: 1.2rem;
+    }
+    .page-section h2.section-heading {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .portfolio-caption-heading {
+        font-size: 16px !important;
+    }
+    .MuiTab-root {
+        padding: 8px 12px;
+        font-size: 10px !important;
+    }
+    .btn-xl {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    .modal-title {
+        font-size: 18px;
+    }
+}
