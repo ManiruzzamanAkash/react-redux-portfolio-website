@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ActivityList from "./ActivityList";
 
@@ -14,8 +14,6 @@ const ActivityTypeList = () => {
   const activityTypes = useSelector(
     (state) => state.ActivityTypeReducer.typeList
   );
-
-  const isLoading = useSelector((state) => state.PortfolioReducer.isLoading);
 
   return (
     <>

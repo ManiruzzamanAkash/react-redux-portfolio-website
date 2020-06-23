@@ -12,10 +12,10 @@ const ActivityList = (props) => {
             <div className="activity-item">
               <h6>{item.title}</h6>
               <hr />
-              {item.description != null && item.description != "null" && (
+              {item.description !== null && item.description !== "null" && (
                 <HTMLParser data={item.description} />
               )}
-              {item.image != null && item.image != "null" && (
+              {item.image !== null && item.image !== "null" && (
                 <img className="w-100 mb-2" src={item.image} alt={item.title} />
               )}
               <p className="text-center">
@@ -23,6 +23,7 @@ const ActivityList = (props) => {
                   href={item.online_link}
                   className="btn btn-sm btn-outline-primary"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.online_link_text} <VisibilityIcon />
                 </a>

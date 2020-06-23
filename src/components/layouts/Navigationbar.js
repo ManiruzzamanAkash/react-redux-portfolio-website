@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
@@ -9,12 +9,15 @@ import { getAboutAction } from "../../store/actions/lifeStories/AboutAction";
 
 const Navigationbar = (props) => {
   const dispatch = useDispatch();
+  const [pageTitle, setPageTitle] = useState("");
+  const currentPath = props.history.location.pathname;
+
   useEffect(() => {
     dispatch(getAboutAction());
-  }, [dispatch]);
+    getCurrentPageTitle();
+  }, [props, currentPath]);
 
   const about = useSelector((state) => state.AboutReducer.about);
-  const currentPath = props.history.location.pathname;
 
   const navLinkCSS = (path) => {
     let navCSS = "nav-item nav-link";
@@ -24,11 +27,39 @@ const Navigationbar = (props) => {
     return navCSS;
   };
 
+  const getCurrentPageTitle = () => {
+    let title = "";
+    const { pathname } = props.history.location;
+
+    switch (pathname) {
+      case "/cv":
+        title = "Curriculum Vitae";
+        break;
+      case "/portfolio":
+        title = "My Portfolios";
+        break;
+      case "/about":
+        title = "About Me";
+        break;
+      case "/extra-curricular":
+        title = "Extra Curricular";
+        break;
+      case "/contact":
+        title = "Contact Me";
+        break;
+    }
+    if (pathname === "/") {
+      setPageTitle("");
+    } else {
+      setPageTitle(title + " |");
+    }
+  };
+
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{about.name}</title>
+        <title>{`${pageTitle} ${about && about.name && about.name}`}</title>
         <link rel="canonical" href="/" />
         <link rel="shortcut icon" href={about.favicon} type="image/x-icon" />
       </Helmet>
@@ -64,6 +95,11 @@ const Navigationbar = (props) => {
                   className={navLinkCSS("/extra-curricular")}
                 >
                   Extra Curricular
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/cv" className={navLinkCSS("/cv")}>
+                  CV
                 </Link>
               </li>
               <li className="nav-item">
