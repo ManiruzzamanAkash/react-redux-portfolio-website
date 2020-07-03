@@ -18,7 +18,6 @@ import { IntlProvider } from "react-redux-multilingual";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import store from "./store/Store";
-// const languageLocale = localStorage.getItem("language");
 const languageLocale = "en";
 
 ReactDOM.render(
@@ -34,4 +33,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-serviceWorker.unregister();
+serviceWorker.register();

@@ -7,6 +7,7 @@ import SlideshowIcon from "@material-ui/icons/Slideshow";
 import HTMLParser from "../../../components/partials/html-parser/HTMLParser";
 
 import SocialLink from "../../modules/about/social-links/SocialLink";
+import SkillSet from "../../modules/portfolio/skills/SkillSet";
 
 const HomePageHeader = (props) => {
   const about = useSelector((state) => state.AboutReducer.about);
@@ -19,7 +20,7 @@ const HomePageHeader = (props) => {
             <div className="col-md-4 col-sm-6">
               <img src={about.profile_image} alt="" className="img" />
             </div>
-            <div className="col-md-8 col-sm-6">
+            <div className="col-md-6 col-sm-6">
               <div className="masthead-subheading">
                 {about.short_description}
                 <div className="about-description">
@@ -50,6 +51,10 @@ const HomePageHeader = (props) => {
                   View Portfolios <SlideshowIcon />
                 </Link>
               </div>
+            </div>
+
+            <div className="col-md-2">
+              <SkillSet />
             </div>
           </div>
         </div>

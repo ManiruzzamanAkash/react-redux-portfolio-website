@@ -47,6 +47,9 @@ const Navigationbar = (props) => {
       case "/contact":
         title = "Contact Me";
         break;
+      case "/blog":
+        title = "Blog";
+        break;
     }
     if (pathname === "/") {
       setPageTitle("");
@@ -95,6 +98,11 @@ const Navigationbar = (props) => {
                   className={navLinkCSS("/extra-curricular")}
                 >
                   Extra Curricular
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/blog" className={navLinkCSS("/blog")}>
+                  Blogs
                 </Link>
               </li>
               <li className="nav-item">

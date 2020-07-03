@@ -1,5 +1,6 @@
 import React from "react";
 import CVPageContainer from "../views/pages/CVPageContainer";
+import BlogsPageContainer from "../views/pages/BlogsPageContainer";
 
 const HomePageContainer = React.lazy(() =>
   import("../views/pages/HomePageContainer")
@@ -52,6 +53,12 @@ const routes = [
     path: "/cv",
     name: "CV Page",
     component: CVPageContainer,
+    exact: true,
+  },
+  {
+    path: "/blog",
+    name: "Blogs",
+    component: BlogsPageContainer,
     exact: true,
   },
 ];

@@ -24,3 +24,7 @@ export const SET_ABOUT_LOADING = "SET_ABOUT_LOADING";
 /** Contact Actions */
 export const SET_CONTACT_LOADING = "SET_CONTACT_LOADING";
 export const STORE_CONTACT = "STORE_CONTACT";
+
+/** Blog Actions */
+export const GET_BLOGS = "GET_BLOGS";
+export const SET_BLOGS_LOADING = "SET_BLOGS_LOADING";

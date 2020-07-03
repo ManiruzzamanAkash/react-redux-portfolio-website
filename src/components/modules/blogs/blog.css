@@ -1,0 +1,35 @@
+.blog-single-short {
+    display: block;
+    padding: 10px;
+    transition: .4s;
+    text-align: center;
+}
+
+.blog-single-short:hover {
+    box-shadow: 10px 20px 30px 40px #80808012;
+}
+
+.blog-single-short img {
+    display: block;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    height: 220px;
+}
+
+.blog-single-short .short-details {
+    padding: 8%;
+    border-radius: 0 0 6px 6px;
+    background: transparent;
+    color: #bcc2d5 !important;
+    border: 1px solid #80808045;
+}
+
+.blog-single-short .short-details h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    /* height: 50px; */
+}
+
+.blog-single-short .short-details p {
+    font-size: 1rem;
+}

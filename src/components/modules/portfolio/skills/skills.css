@@ -1,0 +1,43 @@
+.skil-set-area {
+    margin-top: 10px;
+}
+
+.single-skill-item {
+    display: inline;
+    padding: 2px;
+    margin: 1px;
+}
+
+.single-skill-item img {
+    border-radius: 65px;
+    border: 1px solid gray;
+    width: 60px !important;
+    height: 60px !important;
+    margin: 2px;
+    padding: 2px;
+}
+
+.tooltip-inner {
+    background-color: #fed136 !important;
+    color: #242838;
+}
+
+.bs-tooltip-top .arrow::before,
+.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: #fed136 !important;
+}
+
+.bs-tooltip-right .arrow::before,
+.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+    border-right-color: #fed136 !important;
+}
+
+.bs-tooltip-bottom .arrow::before,
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: #fed136 !important;
+}
+
+.bs-tooltip-left .arrow::before,
+.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+    border-left-color: #fed136 !important;
+}
