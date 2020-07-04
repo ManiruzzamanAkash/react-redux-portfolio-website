@@ -44,8 +44,8 @@ const routes = [
     exact: true,
   },
   {
-    path: "/extra-curricular",
-    name: "Extra Curricular Activity Page",
+    path: "/skills",
+    name: "Skills Page",
     component: ExtraActivityPageContainer,
     exact: true,
   },

@@ -41,8 +41,8 @@ const Navigationbar = (props) => {
       case "/about":
         title = "About Me";
         break;
-      case "/extra-curricular":
-        title = "Extra Curricular";
+      case "/skills":
+        title = "Skills";
         break;
       case "/contact":
         title = "Contact Me";
@@ -93,11 +93,8 @@ const Navigationbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/extra-curricular"
-                  className={navLinkCSS("/extra-curricular")}
-                >
-                  Extra Curricular
+                <Link to="/skills" className={navLinkCSS("/skills")}>
+                  Skills
                 </Link>
               </li>
               <li className="nav-item">

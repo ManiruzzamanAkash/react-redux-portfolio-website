@@ -7,9 +7,9 @@ const ExtraActivityPageContainer = () => {
       <section className="page-section" id="portfolio">
         <div className="container">
           <div className="text-center">
-            <h2 className="section-heading text-uppercase">Extra Curricular</h2>
+            <h2 className="section-heading text-uppercase">Skills</h2>
             <h3 className="section-subheading text-muted">
-              All of my extra curricullar activities
+              All of my skills and extra activities
             </h3>
           </div>
           <ActivityTypeList />
