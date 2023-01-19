@@ -1,13 +1,20 @@
+/**
+ * External dependencies.
+ */
 import React, { Suspense } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
+
+/**
+ * Internal dependencies.
+ */
 import routes from "../src/router/Router";
-import Navigationbar from "./components/layouts/Navigationbar";
+import NavigationBar from "./components/layouts/Navigationbar";
 import Loading from "./components/pages/Loading";
 
 function App() {
   return (
     <div className="App">
-      <Navigationbar />
+      <NavigationBar />
       <Suspense fallback={<Loading />}>
         <Switch>
           {routes.map((route, index) => (

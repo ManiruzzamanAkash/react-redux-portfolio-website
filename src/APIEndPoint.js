@@ -1,8 +1,4 @@
-const environment = "production";
-let baseURL = "http://127.0.0.1:8200/MyPortfolioAPI/";
-if (environment !== "development") {
-  baseURL = "https://akash.devsenv.com/api/";
-}
+const baseURL = process.env.REACT_APP_API_BASE_URL;
 
 /**
  * LifeStory / About

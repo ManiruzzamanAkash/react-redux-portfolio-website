@@ -7,6 +7,7 @@ import {
 const initialState = {
   lifeStoryList: [],
   about: {},
+  name: process.env.REACT_APP_PROFILE_NAME,
   isLoading: false
 };
 
@@ -25,6 +26,7 @@ const AboutReducer = (state = initialState, action) => {
       return {
         ...state,
         about: action.payload,
+        name: action.payload?.name ?? process.env.REACT_APP_PROFILE_NAME,
         isLoading: false
       };
 

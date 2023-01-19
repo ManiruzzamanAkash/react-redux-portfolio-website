@@ -1,11 +1,16 @@
+/**
+ * External dependencies
+ */
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import SlideshowIcon from "@material-ui/icons/Slideshow";
-import HTMLParser from "../../../components/partials/html-parser/HTMLParser";
 
+/**
+ * Internal dependencies.
+ */
+import HTMLParser from "../../../components/partials/html-parser/HTMLParser";
 import SocialLink from "../../modules/about/social-links/SocialLink";
 import SkillSet from "../../modules/portfolio/skills/SkillSet";
 
@@ -27,6 +32,7 @@ const HomePageHeader = (props) => {
                   <HTMLParser data={about.description} />
                 </div>
               </div>
+
               {about.is_welcome_enable && (
                 <div className="masthead-heading text-uppercase">
                   <HTMLParser data={about.welcome_message} />
