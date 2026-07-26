@@ -1,16 +1,20 @@
+/**
+ * External dependencies.
+ */
 import React from "react";
+
+/**
+ * Internal dependencies.
+ */
+import Layout from "../layouts/Layout";
 import LifeHistory from "../../components/modules/about/LifeHistory";
 
 const AboutPageContainer = () => {
-  return (
-    <div className="container">
-      <section className="page-section" id="about">
-        <div className="container">
-          <LifeHistory />
-        </div>
-      </section>
-    </div>
-  );
+    return (
+        <Layout slug='about'>
+            <LifeHistory/>
+        </Layout>
+    );
 };
 
 export default AboutPageContainer;

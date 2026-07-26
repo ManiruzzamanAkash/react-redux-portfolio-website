@@ -1,16 +1,20 @@
+/**
+ * External dependencies.
+ */
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import HttpsRedirect from "react-https-redirect";
-import App from "./App";
 
-/**** Start Import CSS ***********/
+/**
+ * Internal dependencies.
+ */
+import App from "./App";
 import "react-toastify/dist/ReactToastify.min.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./assets/styles/template_style.css";
 import "./assets/styles/style.css";
 import "./assets/styles/responsive.css";
-/**** End Import CSS ***********/
 
 // Language
 import Translations from "./store/actions/language/Translations";
